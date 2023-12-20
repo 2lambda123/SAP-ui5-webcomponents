@@ -39,7 +39,6 @@ import {
 import SideNavigationCss from "./generated/themes/SideNavigation.css.js";
 import SideNavigationPopoverCss from "./generated/themes/SideNavigationPopover.css.js";
 
-
 const PAGE_UP_DOWN_SIZE = 10;
 
 type SideNavigationPopoverContents = {
