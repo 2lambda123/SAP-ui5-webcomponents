@@ -30,6 +30,7 @@ const SCROLL_DEBOUNCE_RATE = 0; // ms
  *
  *
  * @constructor
+ * @author SAP SE
  * @alias sap.ui.webc.fiori.DynamicPage
  * @extends sap.ui.webc.base.UI5Element
  * @tagname ui5-dynamic-page
@@ -44,24 +45,36 @@ const SCROLL_DEBOUNCE_RATE = 0; // ms
 })
 
 class DynamicPage extends UI5Element {
-	static i18nBundle: I18nBundle;
-
-	constructor() {
-		super();
-
-		this._updateMediaRange = this.updateMediaRange.bind(this);
-	}
-
-	static async onDefine() {
-		DynamicPage.i18nBundle = await getI18nBundle("INIT_PACKAGE_VAR_NAME");
-	}
-
+	/**
+	 * Defines if the header is snapped.
+	 *
+	 * @type {boolean}
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.headerSnapped
+	 * @defaultvalue false
+	 * @public
+	 */
 	@property({ type: Boolean })
 	headerSnapped!: boolean;
 
+	/**
+	 * Defines if the header is pinned.
+	 *
+	 * @type {boolean}
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.headerPinned
+	 * @defaultvalue false
+	 * @public
+	 */
 	@property({ type: Boolean })
 	headerPinned!: boolean;
 
+	/**
+	 * Defines if the footer is shown.
+	 *
+	 * @type {boolean}
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.showFooter
+	 * @defaultvalue false
+	 * @public
+	 */
 	@property({ type: Boolean })
 	showFooter!: boolean;
 
@@ -74,17 +87,60 @@ class DynamicPage extends UI5Element {
 	@property()
 	mediaRange!: string;
 
+	/**
+	 * Defines the content of the Dynamic Page.
+	 *
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.content
+	 * @slot
+	 * @public
+	 */
 	@slot({ "default": true, type: HTMLElement })
 	content!: HTMLElement[];
 
+	/**
+	 * Defines the title HTML Element.
+	 *
+	 * @type {sap.ui.webc.fiori.DynamicPageTitle}
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.titleArea
+	 * @slot
+	 * @public
+	 */
 	@slot({ type: DynamicPageTitle })
 	titleArea!: HTMLElement[];
 
+	/**
+	 * Defines the title HTML Element.
+	 *
+	 * @type {sap.ui.webc.fiori.DynamicPageHeader}
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.headerArea
+	 * @slot
+	 * @public
+	 */
 	@slot({ type: DynamicPageHeader })
 	headerArea!: HTMLElement[];
 
+	/**
+	 * Defines the title HTML Element.
+	 *
+	 * @type {sap.ui.webc.fiori.IBar}
+	 * @name sap.ui.webc.fiori.DynamicPage.prototype.footer
+	 * @slot
+	 * @public
+	 */
 	@slot({ type: HTMLElement })
 	footer!: HTMLElement[];
+
+	static i18nBundle: I18nBundle;
+
+	constructor() {
+		super();
+
+		this._updateMediaRange = this.updateMediaRange.bind(this);
+	}
+
+	static async onDefine() {
+		DynamicPage.i18nBundle = await getI18nBundle("INIT_PACKAGE_VAR_NAME");
+	}
 
 	isExpanding = false;
 	iPreviousScrollAmount = 0;
