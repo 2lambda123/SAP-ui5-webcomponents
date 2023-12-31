@@ -1,0 +1,140 @@
+export default {
+    "name": {
+        "control": "select",
+        "options": [
+            "AddColumn",
+            "AddDimensions",
+            "AddPeople",
+            "BalloonSky",
+            "BeforeSearch",
+            "Connection",
+            "EmptyCalendar",
+            "EmptyList",
+            "EmptyPlanningCalendar",
+            "ErrorScreen",
+            "FilterTable",
+            "GroupTable",
+            "NoActivities",
+            "NoColumnsSet",
+            "NoData",
+            "NoDimensionsSet",
+            "NoEntries",
+            "NoFilterResults",
+            "NoMail",
+            "NoMail_v1",
+            "NoNotifications",
+            "NoSavedItems",
+            "NoSavedItems_v1",
+            "NoSearchResults",
+            "NoTasks",
+            "NoTasks_v1",
+            "PageNotFound",
+            "ReloadScreen",
+            "ResizeColumn",
+            "SearchEarth",
+            "SearchFolder",
+            "SimpleBalloon",
+            "SimpleBell",
+            "SimpleCalendar",
+            "SimpleCheckMark",
+            "SimpleConnection",
+            "SimpleEmptyDoc",
+            "SimpleEmptyList",
+            "SimpleError",
+            "SimpleMagnifier",
+            "SimpleMail",
+            "SimpleNoSavedItems",
+            "SimpleNotFoundMagnifier",
+            "SimpleReload",
+            "SimpleTask",
+            "SleepingBell",
+            "SortColumn",
+            "SuccessBalloon",
+            "SuccessCheckMark",
+            "SuccessHighFive",
+            "SuccessScreen",
+            "Survey",
+            "Tent",
+            "TntAvatar",
+            "TntCalculator",
+            "TntChartArea",
+            "TntChartArea2",
+            "TntChartBar",
+            "TntChartBPMNFlow",
+            "TntChartBullet",
+            "TntChartDoughnut",
+            "TntChartFlow",
+            "TntChartGantt",
+            "TntChartOrg",
+            "TntChartPie",
+            "TntCodePlaceholder",
+            "TntCompany",
+            "TntCompass",
+            "TntComponents",
+            "TntDialog",
+            "TntExternalLink",
+            "TntFaceID",
+            "TntFingerprint",
+            "TntHandshake",
+            "TntHelp",
+            "TntLock",
+            "TntMission",
+            "TntMissionFailed",
+            "TntNoApplications",
+            "TntNoFlows",
+            "TntNoUsers",
+            "TntRadar",
+            "TntRoadMap",
+            "TntSecrets",
+            "TntServices",
+            "TntSessionExpired",
+            "TntSessionExpiring",
+            "TntSettings",
+            "TntSuccess",
+            "TntSuccessfulAuth",
+            "TntSystems",
+            "TntTeams",
+            "TntTools",
+            "TntTutorials",
+            "TntUnableToLoad",
+            "TntUnlock",
+            "TntUnsuccessfulAuth",
+            "TntUser2",
+            "UnableToLoad",
+            "UnableToLoadImage",
+            "UnableToUpload",
+            "UploadCollection",
+            "UploadToCloud"
+        ]
+    },
+    "size": {
+        "control": "select",
+        "options": [
+            "Auto",
+            "Base",
+            "Dialog",
+            "Scene",
+            "Spot"
+        ]
+    },
+    "default": {
+        "control": {
+            "type": "text"
+        }
+    },
+    "subtitle": {
+        "control": {
+            "type": "text"
+        }
+    },
+    "title": {
+        "control": {
+            "type": "text"
+        }
+    }
+};
+export const componentInfo = {
+    "package": "@ui5/webcomponents-fiori",
+    "since": "1.0.0-rc.15"
+};
+//# sourceMappingURL=argTypes.js.map
