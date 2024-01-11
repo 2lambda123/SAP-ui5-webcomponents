@@ -23,7 +23,7 @@ jobs:
       run: yarn --frozen-lockfile
 
     - name: Test Build
-      run: yarn ci:testbuild
+      run: yarn test:wdio
 
     - name: Test
       run: yarn test:${{ matrix.suite }}
