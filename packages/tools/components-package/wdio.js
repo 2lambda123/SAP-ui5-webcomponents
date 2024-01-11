@@ -2,6 +2,11 @@ const dns = require("node:dns");
 
 exports.config = {
 	//
+	// ==============
+	// WDIO Configuration
+	// ==============
+	//
+	//
 	// ====================
 	// Runner Configuration
 	// ====================
@@ -42,7 +47,7 @@ exports.config = {
 	// and 30 processes will get spawned. The property handles how many capabilities
 	// from the same test should run tests.
 	//
-	maxInstances: 10,
+	maxInstances: 3,
 	//
 	// If you have trouble getting all important capabilities together, check out the
 	// Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -96,14 +101,14 @@ exports.config = {
 	path: '',
 	//
 	// Default timeout for all waitFor* commands.
-	waitforTimeout: 10000,
+	waitforTimeout: 15000,
 	//
 	// Default timeout in milliseconds for request
 	// if Selenium Grid doesn't send response
-	connectionRetryTimeout: 90000,
+	connectionRetryTimeout: 120000,
 	//
 	// Default request retries count
-	connectionRetryCount: 3,
+	connectionRetryCount: 5,
 	//
 	// Test runner services
 	// Services take over a specific job you don't want to take care of. They enhance
@@ -326,7 +331,7 @@ exports.config = {
 	 * @param {Number} result 0 - command success, 1 - command error
 	 * @param {Object} error error object if any
 	 */
-	afterCommand: async function (commandName, args, result, error) {
+	afterCommand: function (commandName, args, result, error) {
 
 		// url -> set configuration first
 		if (commandName === "url" && !args[0].includes("do-not-change-configuration")) {
